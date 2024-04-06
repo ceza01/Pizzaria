@@ -35,5 +35,9 @@ public class Pizza {
         return ingredientes;
     }
 
+    public static void zerarIngredientes(){
+
+    }
+
 
 }
