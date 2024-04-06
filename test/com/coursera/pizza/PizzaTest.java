@@ -59,6 +59,7 @@ public class PizzaTest {
         Assertions.assertTrue(ingredientes.containsKey("queijo"));
         Assertions.assertTrue(ingredientes.containsKey("salame"));
         Assertions.assertTrue(ingredientes.containsKey("oregano"));
+        Assertions.assertTrue(ingredientes.containsKey("presunto"));
     }
 
 }
