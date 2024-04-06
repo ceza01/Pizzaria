@@ -11,14 +11,15 @@ public class Pizza {
     }
 
     public double getPreco(){
-        if (numIgredientes <= 2) {
-            return 15;
+        if (numIgredientes > 5) {
+            return 23;
         } else if(numIgredientes >= 3 && numIgredientes <= 5){
             return 20;
-        } else{
-            return 23;
+        } else if (numIgredientes > 0 && numIgredientes <= 2){
+            return 15;
+        } else {
+            return 0;
         }
-
     }
 
     public void adicionarIngrediente(String ingrediente){
@@ -38,6 +39,5 @@ public class Pizza {
     public static void zerarIngredientes(){
         ingredientes.clear();
     }
-
 
 }
