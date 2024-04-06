@@ -3,7 +3,7 @@
 ## Orientação a Objetos com Java
 Projeto desenvolvido durante a semana 2 do curso de Orientação a Objetos com Java, pelo ITA, na plataforma Coursera.
 
-Durante a semana 3, foi proposto o desenvolvimento de testes para o projeto utilizando JUnit.
+Durante a semana 3 do curso, foi proposto o desenvolvimento de testes para o projeto utilizando JUnit.
 
 ## Instruções do Projeto
 Crie uma classe Pizza que possua o método adicionaIngrediente() que recebe uma String com o ingrediente a ser adicionado. Essa classe também deve possuir o método getPreco() que calcula da seguinte forma: 
