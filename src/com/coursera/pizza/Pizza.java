@@ -36,7 +36,7 @@ public class Pizza {
     }
 
     public static void zerarIngredientes(){
-
+        ingredientes.clear();
     }
 
 

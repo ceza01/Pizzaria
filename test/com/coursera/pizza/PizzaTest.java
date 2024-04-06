@@ -1,9 +1,18 @@
 package com.coursera.pizza;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
-class PizzaTest {
+import java.util.HashMap;
+
+public class PizzaTest {
+
+    @AfterEach
+        public void tearDown(){
+        Pizza.zerarIngredientes();
+    }
 
     @Test
     public void testGetPreco() {
@@ -33,6 +42,23 @@ class PizzaTest {
         pizza.adicionarIngrediente("salame");
         pizza.adicionarIngrediente("oregano");
         Assertions.assertEquals(23, pizza.getPreco());
+    }
+
+    @Test
+    public void testRegistroIngredientes(){
+        Pizza pizza = new Pizza();
+        pizza.adicionarIngrediente("queijo");
+        pizza.adicionarIngrediente("salame");
+        pizza.adicionarIngrediente("oregano");
+        pizza.adicionarIngrediente("presunto");
+
+        HashMap<String, Integer> ingredientes = Pizza.getIngredientesUtilizados();
+
+        Assertions.assertEquals(4, ingredientes.size());
+
+        Assertions.assertTrue(ingredientes.containsKey("queijo"));
+        Assertions.assertTrue(ingredientes.containsKey("salame"));
+        Assertions.assertTrue(ingredientes.containsKey("oregano"));
     }
 
 }
