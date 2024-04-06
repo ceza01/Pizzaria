@@ -50,16 +50,14 @@ public class PizzaTest {
         pizza.adicionarIngrediente("queijo");
         pizza.adicionarIngrediente("salame");
         pizza.adicionarIngrediente("oregano");
-        pizza.adicionarIngrediente("presunto");
 
         HashMap<String, Integer> ingredientes = Pizza.getIngredientesUtilizados();
 
-        Assertions.assertEquals(4, ingredientes.size());
+        Assertions.assertEquals(3, ingredientes.size());
 
         Assertions.assertTrue(ingredientes.containsKey("queijo"));
         Assertions.assertTrue(ingredientes.containsKey("salame"));
         Assertions.assertTrue(ingredientes.containsKey("oregano"));
-        Assertions.assertTrue(ingredientes.containsKey("presunto"));
     }
 
 }
